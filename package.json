@@ -1,0 +1,22 @@
+{
+  "name": "bb-require-boilerplate",
+  "version": "0.0.0",
+  "description": "grunt fiddle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vjunloc/bb-require-boilerplate.git"
+  },
+  "author": "vjunloc",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/vjunloc/bb-require-boilerplate/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-requirejs": "~0.4.1"
+  }
+}
