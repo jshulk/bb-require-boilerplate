@@ -1,6 +1,14 @@
 module.exports = function(grunt){
 	grunt.initConfig({
 
+		watch:{
+			files: ["js/*.js", "index.html"],
+			tasks : ["build"]
+		},
+		clean: {
+			options:{ force : true},
+			src : ['dist']
+		},
 		requirejs:{
 			compile:{
 				options:{
@@ -20,5 +28,8 @@ module.exports = function(grunt){
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
-	grunt.registerTask('default', ['requirejs']);
+	grunt.loadNpmTasks('grunt-contrib-clean');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.registerTask('build', 'cleans the dist and rebuilds the project', ['clean', 'requirejs']);
+	grunt.registerTask('default', ['watch']);
 };
