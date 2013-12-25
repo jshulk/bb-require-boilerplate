@@ -10,7 +10,7 @@ define([
 			initialize: function(){
 				console.log($.fn.jquery);
 				this.testView = new TestView();
-				console.log('app initialized recompiled');
+				console.log('app initialized recompile');
 			}
 	}
 });
