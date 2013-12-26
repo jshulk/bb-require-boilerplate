@@ -1,6 +1,14 @@
 module.exports = function(grunt){
         var pkg = require("./package.json");
         grunt.initConfig({
+                notify : {
+                    build:{
+                        options:{
+                            title : "Build complete", 
+                            message : "Ready for deployment"
+                        }
+                    }
+                },
                 watch:{
                         files: pkg.filesToWatch,
                         tasks : ["build"]
@@ -43,10 +51,11 @@ module.exports = function(grunt){
         grunt.loadNpmTasks('grunt-contrib-clean');
         grunt.loadNpmTasks('grunt-contrib-watch');
         grunt.loadNpmTasks('grunt-contrib-jasmine');
+        grunt.loadNpmTasks('grunt-notify');
         //grunt.registerTask('build', 'cleans the dist and rebuilds the project', ['clean', 'requirejs']);
         /* alternate approach */
         grunt.registerTask('build', "cleans the dist and rebuilds the project", function(){
-                grunt.task.run(['jasmine', 'clean', 'requirejs']);
+                grunt.task.run(['jasmine', 'clean', 'requirejs', 'notify:build']);
                 
         });
         grunt.registerTask('default', ['watch']);
