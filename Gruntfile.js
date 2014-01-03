@@ -36,10 +36,11 @@ module.exports = function(grunt){
                             },
                             jasmine:{
                             	dev: {
-                            		src : "js/models/*.js",
+                            		src : ["js/models/*.js", "js/views/*.js"],
                             		options:{
                             			specs: "test/spec/*Spec.js",
-                                        vendor : ["js/libs/sinon-1.7.1.js", "js/libs/jasmine-sinon.js"],
+                                        //helpers : "test/spec/javascripts/helpers/*.js",
+                                        vendor : [ "js/libs/sinon-1.7.1.js", "js/libs/jasmine-sinon.js" ],
                                         keepRunner:false,
                             			template : require("grunt-template-jasmine-requirejs"),
                             			templateOptions:{

@@ -15,17 +15,13 @@ require.config({
 			exports: '$.ui'
 		}
 	},
-	map:{
-		"*" : { 'jquery' : 'jquery-private' },
-		'jquery-private' : { 'jquery' : 'jquery'}
-	},
+
 	paths: {
 		'jquery' : 'libs/jquery.min',
 		'jqueryui'  : 'libs/jquery-ui',
 		'underscore' : 'libs/underscore-min',
 		'backbone' : 'libs/backbone-min',
-		'tpl' : 'libs/tpl',
-		'jquery-private' : 'libs/jquery-private'
+		'tpl' : 'libs/tpl'
 	}
 
 });
